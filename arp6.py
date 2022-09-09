@@ -39,6 +39,6 @@ print("IP" + " "*30+"MAC")
 # Print table of accumulated data
 
 for client in clients:
-    print("{:24}    {}".format(client['ip'], client['mac'].startswith(mac_key)))
+    print("{:3}    {}".format(client['ip'], client['mac'].startswith(mac_key)))
 # Printing IP addresses and assosciated MACs from clients list
 # With bool checking against mac_key

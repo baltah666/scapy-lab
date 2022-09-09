@@ -1,0 +1,10 @@
+Started by user [8mha:////4GfLUHztwYLI7i/IrBT7B7MvFFE57S5jm1ZMBiGtN6nVAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgYe/dLi1CL9pMScksQMADBnvlPBAAAA[0mabdulilah
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/TEST1
+[TEST1] $ /bin/sh -xe /tmp/jenkins9285128524198146326.sh
++ pwd
+/var/jenkins_home/workspace/TEST1
++ /home/gns3/scapy-lab
+/tmp/jenkins9285128524198146326.sh: 3: /home/gns3/scapy-lab: not found
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

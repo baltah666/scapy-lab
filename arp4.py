@@ -11,8 +11,9 @@ request_broadcast = broadcast / request
 clients = scapy.srp(request_broadcast, timeout = 1)[0]
 print (clients)
 print(" ***************IP Node Live*****************\n")
+print("IP" + " "*20+"MAC"+" "*20+"sender")
 for element in clients:
-	print(element[1].psrc + "	 " + element[1].hwsrc)
+	print(element[1].psrc + "	 " + element[1].hwsrc +  "        " + element[1].pdst)
 #        print("")
 #        p=(element[1].psrc)
 #        print(p)
