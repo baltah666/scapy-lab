@@ -1,5 +1,15 @@
-    #!/usr/bin/env python
-from scapy.all import ARP, Ether, srp
+#!/usr/bin/env python
+
+# Suppress Scapy IPv6 warning
+import logging
+logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
+
+# Begin our Scapy script.
+from scapy.all import *
+
+
+
+#from scapy.all import ARP, Ether, srp
 import socket
 # importing main functions from Scapy and Socket
 
