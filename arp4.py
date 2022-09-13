@@ -1,7 +1,8 @@
 import scapy.all as scapy
 
 request = scapy.ARP()
-x = raw_input("Enter IP address: ")
+#x = raw_input("Enter IP address: ")
+x = "192.168.174.1/24"
 request.pdst = x
 
 broadcast = scapy.Ether()
