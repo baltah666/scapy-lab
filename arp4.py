@@ -1,4 +1,6 @@
 import scapy.all as scapy
+import socket
+import os
 
 request = scapy.ARP()
 #x = raw_input("Enter IP address: ")
@@ -14,8 +16,15 @@ print (clients)
 print(" ***************IP Node Live*****************\n")
 print("IP" + " "*20+"MAC"+" "*20+"sender")
 for element in clients:
-	print(element[1].psrc + "	 " + element[1].hwsrc +  "        " + element[1].pdst)
-#        print("")
+	a = element[1].psrc
+#        y= "192.168.174.250"
+#        b =  socket.gethostbyaddr (y)
+        b =  socket.gethostbyaddr (a)
+#	print(element[1].psrc + "	 " + element[1].hwsrc +  "        " + element[1].pdst + "          " +  a)
+	print(element[1].psrc + "	 " + element[1].hwsrc +  "        " + element[1].pdst + "          " +  str(b[0]))
+#print(type(a))
+#print(type(b))
+#print(type(x))
 #        p=(element[1].psrc)
 #        print(p)
 #        if p == "0c:9f:2d:e4:00:00"
