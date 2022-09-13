@@ -1,15 +1,23 @@
 pipeline {
   agent any
   stages {
-    stage('version') {
+    stage('Stage 1') {
       steps {
-        sh 'python --version'
+        echo "Job URL: "+currentBuild.absoluteUrl
+        script {
+          sh 'df -h'
+          echo 'Stage 1'
+        }
       }
     }
-    stage('hello') {
+
+    stage('Stage 2') {
       steps {
-        sh 'python3.9 arp6.py'
+        script {
+          python arp4.py
+        }
       }
     }
   }
 }
+
