@@ -14,7 +14,7 @@ pipeline {
     stage('Stage 2') {
       steps {
         script {
-          python arp4.py
+          sh 'python arp4.py'
         }
       }
     }
