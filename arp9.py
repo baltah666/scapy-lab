@@ -1,6 +1,6 @@
 import scapy.all as scapy
 
-juniper = "0c:2f:0b"
+juniper = "0c:"
 Extrem  = "0c:6b:b7"
 cisco   = "9a:f2:07"
 
