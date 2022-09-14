@@ -12,9 +12,12 @@ broadcast.dst = 'ff:ff:ff:ff:ff:ff'
 
 request_broadcast = broadcast / request
 clients = scapy.srp(request_broadcast, timeout = 1)[0]
+os.system('clear')
 print (clients)
-print(" ***************IP Node Live*****************\n")
-print("IP" + " "*20+"MAC"+" "*20+"sender")
+print(" ************************************************************************************")
+print("IP" + " "*20+"MAC"+" "*20+"scanner"+" "*15+"hostname")
+print(" *************************************************************************************")
+
 for element in clients:
 	a = element[1].psrc
 #        y= "192.168.174.250"
@@ -29,4 +32,6 @@ for element in clients:
 #        print(p)
 #        if p == "0c:9f:2d:e4:00:00"
 #           then print("Juniper")
-print(" ***************IP Node Live*****************\n")
+print(" *************************************************************************************\n")
+print(" *************************************************************************************\n")
+
