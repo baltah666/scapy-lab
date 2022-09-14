@@ -2,9 +2,8 @@ import scapy.all as scapy
 import socket
 import os
 
-juniper = ("0c:2f:0b:da:00:00" , "0c:a1:4b:2e:00:00")
-#juniper = "0c:a1:4b:2e:00:00"
-Extrem  = ("0c:a8:2b:6d:00:00","0c:ea:54:42:00:00","0c:a8:2b:6d:00:00")
+juniper = ("20:d8:0b:")
+Extrem  = ("00:04:96:")
 cisco   = "9a:f2:07"
 
 
@@ -27,20 +26,25 @@ for element in clients:
 	if element[1].hwsrc.startswith(juniper)== True:
 		a = element[1].psrc
 		b =  socket.gethostbyaddr (a)
-		print(element[1].psrc + "        " + element[1].hwsrc +  "        " + element[1].pdst + "        " + "juniper" +  "                " +  str(b[0]) )
+		print(element[1].psrc + "        " + element[1].hwsrc +  "        " + element[1].pdst + "        " + "juniper" +  "                " +  str(b[0]))
 
 	if element[1].hwsrc.startswith(Extrem)== True:
                 a = element[1].psrc
                 b =  socket.gethostbyaddr (a)
-	        print(element[1].psrc + "        " + element[1].hwsrc +  "        " + element[1].pdst + "        " + "Extrem"  +  "                " +  str(b[0]))
+#	        print(element[1].psrc + "        " + element[1].hwsrc +  "        " + element[1].pdst + "        " + "Extrem"  +  "                " +  str(b[0]))
+                print(element[1].psrc + "        " + element[1].hwsrc +  "        " + element[1].pdst + "        " + "Extrem" +  "                " +  str(b[0]))
 
-        if element[1].hwsrc.startswith(cisco)== True:
+#        if element[1].hwsrc.startswith(cisco)== True:
+	if element[1].hwsrc.startswith(cisco)== True:
                 a = element[1].psrc
                 b =  socket.gethostbyaddr (a)
-		print(element[1].psrc + "        " + element[1].hwsrc +  "        " + element[1].pdst + "        " + "cisco"   +  "                 " +  str(b[0]))
+                print(element[1].psrc + "        " + element[1].hwsrc +  "        " + element[1].pdst + "        " + "cisco" +  "                " +  str(b[0]))
+#		print(element[1].psrc + "        " + element[1].hwsrc +  "        " + element[1].pdst + "        " + "cisco"   +  "                 " +  str(b[0]))
         	
-#		else :
-#		print(element[1].psrc + "        " + element[1].hwsrc +  "        " + element[1].pdst + "        " + "linux"   +  "                 " +  str(b[0]))
+#	else :
+#               a = element[1].psrc
+#               b =  socket.gethostbyaddr (a)
+#	       print(element[1].psrc + "        " + element[1].hwsrc +  "        " + element[1].pdst + "        " + "linux"   +  "                 " +  str(b[0]))
 
 print(" ****************************************************************************************************")
 
