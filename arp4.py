@@ -19,19 +19,9 @@ print("IP" + " "*20+"MAC"+" "*20+"scanner"+" "*15+"hostname")
 print(" *************************************************************************************")
 
 for element in clients:
-	a = element[1].psrc
-#        y= "192.168.174.250"
-#        b =  socket.gethostbyaddr (y)
-        b =  socket.gethostbyaddr (a)
-#	print(element[1].psrc + "	 " + element[1].hwsrc +  "        " + element[1].pdst + "          " +  a)
-	print(element[1].psrc + "	 " + element[1].hwsrc +  "        " + element[1].pdst + "          " +  str(b[0]))
-#print(type(a))
-#print(type(b))
-#print(type(x))
-#        p=(element[1].psrc)
-#        print(p)
-#        if p == "0c:9f:2d:e4:00:00"
-#           then print("Juniper")
+    a = element[1].psrc
+    b =socket.gethostbyaddr(a)
+    print(element[1].psrc + "	 " + element[1].hwsrc +  "        " + element[1].pdst + "          " +  str(b[0]))
 print(" *************************************************************************************\n")
 print(" *************************************************************************************\n")
 
