@@ -10,7 +10,7 @@ cisco   = "9a:f2:07"
 request = scapy.ARP()
 #x = input("Enter IP address: ")
 #x = "192.168.174.1/24"
-request.pdst = Parameter.name
+request.pdst = ${params.name}"
 
 broadcast = scapy.Ether()
 broadcast.dst = 'ff:ff:ff:ff:ff:ff'
