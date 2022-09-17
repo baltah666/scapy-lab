@@ -45,6 +45,7 @@ for element in clients:
 #	else :
 #               a = element[1].psrc
 #               b =  socket.gethostbyaddr (a)
+#               print(element[1].psrc + "        " + element[1].hwsrc +  "        " + element[1].pdst + "        " + "Linux" +  "                " +  str(b[0]))
 #	       print(element[1].psrc + "        " + element[1].hwsrc +  "        " + element[1].pdst + "        " + "linux"   +  "                 " +  str(b[0]))
 
 print(" ****************************************************************************************************")
