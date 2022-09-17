@@ -29,24 +29,20 @@ for element in clients:
 		b =  socket.gethostbyaddr (a)
 		print(element[1].psrc + "        " + element[1].hwsrc +  "        " + element[1].pdst + "        " + "juniper" +  "                " +  str(b[0]))
 
-	if element[1].hwsrc.startswith(Extrem)== True:
+	elif element[1].hwsrc.startswith(Extrem)== True:
                 a = element[1].psrc
                 b =  socket.gethostbyaddr (a)
-#	        print(element[1].psrc + "        " + element[1].hwsrc +  "        " + element[1].pdst + "        " + "Extrem"  +  "                " +  str(b[0]))
                 print(element[1].psrc + "        " + element[1].hwsrc +  "        " + element[1].pdst + "        " + "Extrem" +  "                " +  str(b[0]))
 
-#        if element[1].hwsrc.startswith(cisco)== True:
-	if element[1].hwsrc.startswith(cisco)== True:
+	elif element[1].hwsrc.startswith(cisco)== True:
                 a = element[1].psrc
                 b =  socket.gethostbyaddr (a)
                 print(element[1].psrc + "        " + element[1].hwsrc +  "        " + element[1].pdst + "        " + "cisco" +  "                " +  str(b[0]))
-#		print(element[1].psrc + "        " + element[1].hwsrc +  "        " + element[1].pdst + "        " + "cisco"   +  "                 " +  str(b[0]))
         	
 	else :
                a = element[1].psrc
                b =  socket.gethostbyaddr (a)
                print(element[1].psrc + "        " + element[1].hwsrc +  "        " + element[1].pdst + "        " + "Linux" +  "                " +  str(b[0]))
-#	       print(element[1].psrc + "        " + element[1].hwsrc +  "        " + element[1].pdst + "        " + "linux"   +  "                 " +  str(b[0]))
 
 print(" ****************************************************************************************************")
 
